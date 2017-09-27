@@ -3,9 +3,11 @@ require('styles/App.css');
 
 import React from 'react';
 
+// 获取图片相关的数据
 let imageDatas = require('../data/imageDatas.json');
 
-function genImageURL(imageDatasArr){
+// 利用自制行函数，将图片文件信息转换成图片URL途径信息
+imagesDatas = (function genImageURL(imageDatasArr){
   for(var i=0,j=imageDatasArr.length;i<j;i++){
     var singleImageData = imageDatasArr[i];
 
@@ -16,9 +18,11 @@ function genImageURL(imageDatasArr){
 
   return imageDatasArr;
 
-}
+})(imagesDatas);
 
 let yeomanImage = require('../images/yeoman.png');
+
+let ziji = "boy";
 
 class AppComponent extends React.Component {
   render() {
